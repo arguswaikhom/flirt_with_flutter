@@ -1,4 +1,4 @@
-import 'package:flirt_with_flutter/model/AppNav.dart';
+import 'package:flirt_with_flutter/model/ExpandableNavGroup.dart';
 import 'package:flirt_with_flutter/res/AppNavList.dart';
 import 'package:flirt_with_flutter/res/AppString.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
         });
       },
       children: navList.map<ExpansionPanel>(
-        (AppNav nav) {
+        (ExpandableNavGroup nav) {
           return ExpansionPanel(
             headerBuilder: (BuildContext context, bool isExpanded) {
               return ListTile(
@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  _getExpandedChildren(final AppNav nav) {
+  _getExpandedChildren(final ExpandableNavGroup nav) {
     return ListView.builder(
       shrinkWrap: true,
       itemCount: nav.children.length,
