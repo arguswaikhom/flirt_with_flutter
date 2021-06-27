@@ -1,5 +1,5 @@
-import 'package:flirt_with_flutter/page/HomePage.dart';
-import 'package:flirt_with_flutter/res/AppString.dart';
+import 'package:flirt_with_flutter/page/home_page.dart';
+import 'package:flirt_with_flutter/res/app_string.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

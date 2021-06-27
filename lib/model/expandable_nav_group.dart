@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'TitleNav.dart';
+import 'title_nav.dart';
 
 class ExpandableNavGroup {
   final String label;
