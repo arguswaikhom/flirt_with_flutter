@@ -1,6 +1,5 @@
+import 'package:flirt_with_flutter/flirt_with_flutter.dart';
 import 'package:flutter/material.dart';
-
-import 'title_nav.dart';
 
 class ExpandableNavGroup {
   final String label;

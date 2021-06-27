@@ -1,6 +1,4 @@
-import 'package:flirt_with_flutter/model/expandable_nav_group.dart';
-import 'package:flirt_with_flutter/res/app_nav_list.dart';
-import 'package:flirt_with_flutter/res/app_string.dart';
+import 'package:flirt_with_flutter/flirt_with_flutter.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
