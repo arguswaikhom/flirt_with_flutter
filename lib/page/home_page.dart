@@ -16,42 +16,35 @@ class _HomePageState extends State<HomePage> {
         elevation: 0,
         title: Text(AppString.appName),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          child: _getBodyContent(),
-        ),
-      ),
+      body: _getBodyContent(),
     );
   }
 
-  _getBodyContent() {
+  Widget _getBodyContent() {
     final navList = AppNavList.list;
 
-    return ExpansionPanelList(
-      elevation: 0,
-      expansionCallback: (index, isExpanded) {
+    return ExpansionEntryList(
+      children: navList.map<ExpansionEntry>((ExpandableNavGroup nav) {
+        return ExpansionEntry(
+          headerBuilder: (bool isExpanded) {
+            return ListTile(
+              title: Text(nav.label),
+              leading: Icon(nav.icon),
+            );
+          },
+          body: _getExpandedChildren(nav),
+          isExpanded: nav.isExpanded,
+        );
+      }).toList(),
+      expansionCallback: (int index, bool isExpanded) {
         setState(() {
           navList[index].isExpanded = !isExpanded;
         });
       },
-      children: navList.map<ExpansionPanel>(
-        (ExpandableNavGroup nav) {
-          return ExpansionPanel(
-            headerBuilder: (BuildContext context, bool isExpanded) {
-              return ListTile(
-                title: Text(nav.label),
-                leading: Icon(nav.icon),
-              );
-            },
-            body: _getExpandedChildren(nav),
-            isExpanded: nav.isExpanded,
-          );
-        },
-      ).toList(),
     );
   }
 
-  _getExpandedChildren(final ExpandableNavGroup nav) {
+  Widget _getExpandedChildren(final ExpandableNavGroup nav) {
     return ListView.builder(
       shrinkWrap: true,
       itemCount: nav.children.length,

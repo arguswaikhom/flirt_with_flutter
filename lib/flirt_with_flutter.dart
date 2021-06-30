@@ -1,5 +1,6 @@
 // model
 export 'model/expandable_nav_group.dart';
+export 'model/expansion_entry.dart';
 export 'model/title_nav.dart';
 // page
 export 'page/biting_stream_builder_page.dart';
@@ -13,3 +14,5 @@ export 'page/tab/toggle_tab_page.dart';
 // res
 export 'res/app_nav_list.dart';
 export 'res/app_string.dart';
+// widget
+export 'widget/expansion_entry_list.dart';
