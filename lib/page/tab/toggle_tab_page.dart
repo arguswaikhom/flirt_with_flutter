@@ -15,34 +15,8 @@ class _ToggleTabPageState extends State<ToggleTabPage> {
         appBar: AppBar(
           elevation: 0,
           title: Text(AppString.titleToggleTab),
-          bottom: PreferredSize(
-            preferredSize: const Size.fromHeight(kToolbarHeight),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 45,
-                decoration: BoxDecoration(
-                  color: Colors.grey[300],
-                  borderRadius: BorderRadius.circular(
-                    25.0,
-                  ),
-                ),
-                child: TabBar(
-                  // give the indicator a decoration (color and border radius)
-                  indicator: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25.0),
-                    color: Colors.green,
-                  ),
-                  labelColor: Colors.white,
-                  unselectedLabelColor: Colors.black,
-                  tabs: [
-                    Tab(text: 'First'),
-                    Tab(text: 'Second'), // second tab bar view widget
-                    Tab(text: 'Third'), // second tab bar view widget
-                  ],
-                ),
-              ),
-            ),
+          bottom: ToggleTabBar(
+            labels: ['First', 'Second', 'Third'],
           ),
         ),
         body: TabBarView(
