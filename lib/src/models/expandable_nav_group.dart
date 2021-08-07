@@ -8,8 +8,8 @@ class ExpandableNavGroup {
   bool isExpanded = false;
 
   ExpandableNavGroup({
-    @required this.label,
-    @required this.icon,
-    @required this.children,
+    required this.label,
+    required this.icon,
+    required this.children,
   });
 }

@@ -5,7 +5,7 @@ class TitleNav {
   final Widget page;
 
   TitleNav({
-    @required this.label,
-    @required this.page,
+    required this.label,
+    required this.page,
   });
 }

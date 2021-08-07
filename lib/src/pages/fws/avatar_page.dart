@@ -3,7 +3,7 @@ import 'package:flirt_with_style/flirt_with_style.dart';
 import 'package:flutter/material.dart';
 
 class AvatarPage extends StatefulWidget {
-  const AvatarPage({Key key}) : super(key: key);
+  const AvatarPage({Key? key}) : super(key: key);
 
   @override
   _AvatarPageState createState() => _AvatarPageState();

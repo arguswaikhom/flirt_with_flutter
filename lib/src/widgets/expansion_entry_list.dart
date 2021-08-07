@@ -5,14 +5,13 @@ typedef ExpansionCallback = void Function(int index, bool isExpanded);
 
 class ExpansionEntryList extends StatelessWidget {
   final List<ExpansionEntry> children;
-  final ExpansionCallback expansionCallback;
+  final ExpansionCallback? expansionCallback;
 
   const ExpansionEntryList({
-    Key key,
+    Key? key,
     this.expansionCallback,
     this.children = const <ExpansionEntry>[],
-  })  : assert(children != null),
-        super(key: key);
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +38,7 @@ class ExpansionEntryList extends StatelessWidget {
         ],
       ),
       onTap: () => expansionCallback != null
-          ? expansionCallback(index, ee.isExpanded)
+          ? expansionCallback!(index, ee.isExpanded)
           : () {},
     );
 

@@ -6,22 +6,17 @@ class ToggleTabBar extends StatelessWidget implements PreferredSizeWidget {
   final Color unselectedLabelColor;
   final Color backgroundColor;
   final bool isScrollable;
-  final Color accentColor;
+  final Color? accentColor;
 
   const ToggleTabBar({
-    Key key,
+    Key? key,
     this.labels = const <String>[],
     this.selectedLabelColor = Colors.white,
     this.unselectedLabelColor = Colors.black,
     this.backgroundColor = const Color(0xFFE0E0E0),
     this.isScrollable = false,
     this.accentColor,
-  })  : assert(labels != null),
-        assert(selectedLabelColor != null),
-        assert(unselectedLabelColor != null),
-        assert(backgroundColor != null),
-        assert(isScrollable != null),
-        super(key: key);
+  }) : super(key: key);
 
   _getTabs() => labels.map((e) => Tab(text: e)).toList();
 

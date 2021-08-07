@@ -8,11 +8,9 @@ class ExpansionEntry {
   final Widget body;
 
   const ExpansionEntry({
-    Key key,
-    @required this.isExpanded,
-    @required this.headerBuilder,
-    @required this.body,
-  })  : assert(headerBuilder != null),
-        assert(body != null),
-        assert(isExpanded != null);
+    Key? key,
+    required this.isExpanded,
+    required this.headerBuilder,
+    required this.body,
+  });
 }

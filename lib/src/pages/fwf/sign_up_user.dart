@@ -3,7 +3,7 @@ import 'package:flirt_with_style/flirt_with_style.dart';
 import 'package:flutter/material.dart';
 
 class SignUpUser extends StatefulWidget {
-  const SignUpUser({Key key}) : super(key: key);
+  const SignUpUser({Key? key}) : super(key: key);
 
   @override
   _SignUpUserState createState() => _SignUpUserState();
@@ -36,9 +36,9 @@ class _SignUpUserState extends State<SignUpUser> {
   }
 
   Widget _getSignUpForm({
-    @required String hint,
-    @required IconData prefixIcon,
-    IconData suffixIcon,
+    required String hint,
+    required IconData prefixIcon,
+    IconData? suffixIcon,
   }) {
     final OutlineInputBorder border = OutlineInputBorder(
       borderSide: BorderSide(
@@ -50,7 +50,7 @@ class _SignUpUserState extends State<SignUpUser> {
     final OutlineInputBorder errorBorder = OutlineInputBorder(
       borderSide: BorderSide(
         width: 3.0,
-        color: Colors.red[300],
+        color: Colors.red[300]!,
       ),
       borderRadius: BorderRadius.circular(32.0),
     );
