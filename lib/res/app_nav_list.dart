@@ -4,23 +4,13 @@ import 'package:flutter/material.dart';
 class AppNavList {
   static final List<ExpandableNavGroup> list = <ExpandableNavGroup>[
     ExpandableNavGroup(
-      label: "Listview",
-      icon: Icons.list_alt_rounded,
-      children: [
-        TitleNav(
-          label: "Infinite listview",
-          page: InfiniteListViewPaginationPage(),
-        )
-      ],
-    ),
-    ExpandableNavGroup(
       label: "Test pages",
       icon: Icons.list_alt_rounded,
       children: [
         TitleNav(
           label: "Biting stream builder",
           page: BitingStreamBuilderPage(),
-        )
+        ),
       ],
     ),
     ExpandableNavGroup(
@@ -46,6 +36,26 @@ class AppNavList {
         TitleNav(
           label: AppString.titleToggleTab,
           page: ToggleTabPage(),
+        )
+      ],
+    ),
+    ExpandableNavGroup(
+      label: AppString.titleImage,
+      icon: Icons.image,
+      children: [
+        TitleNav(
+          label: AppString.titleAvatarImage,
+          page: AvatarPage(),
+        )
+      ],
+    ),
+    ExpandableNavGroup(
+      label: kASTitleAuth,
+      icon: Icons.security,
+      children: [
+        TitleNav(
+          label: kASTitleAuth,
+          page: SignUpUser(),
         )
       ],
     ),
