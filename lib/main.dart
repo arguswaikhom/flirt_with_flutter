@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Flirt with Flutter',
       theme: ThemeData(
         fontFamily: GoogleFonts.ubuntu().fontFamily,
-        scaffoldBackgroundColor: Color(0xfff2f2f2),
+        // scaffoldBackgroundColor: Color(0xfff2f2f2),
         visualDensity: VisualDensity.adaptivePlatformDensity,
         appBarTheme: AppBarTheme(
           elevation: 0.0,
